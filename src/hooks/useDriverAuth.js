@@ -5,6 +5,7 @@ import { DriverContext } from "../DriverContext";
 export const useDriverAuth = () => {
   const [authedDriver, setAuthedDriver] = useContext(DriverContext);
 
+  // Sets the initial driver context when hook is called.
   useEffect(() => {
     const initailAuthedUser = async () => {
       setAuthedDriver(await driverStatus());
